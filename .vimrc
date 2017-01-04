@@ -30,6 +30,13 @@ Plug 'https://github.com/tmhedberg/matchit.git'
 
 call plug#end()
 
+" 设置swp文件的目录
+set dir=$HOME/.vim/tmp
+
+" 重启后撤销历史可用 persistent undo 
+set undofile
+set undodir=$HOME/.vim/undodir
+set undolevels=1000 "maximum number of changes that can be undone
 
 "设置<leader>，默认为"\"
 let mapleader = ","
@@ -60,6 +67,8 @@ set expandtab                " 是否在缩进和遇到Tab键时使用空格替�
 set shiftwidth=4             " 换行时行间交错使用4个空格
 set autoindent               " 自动对齐
 set ruler                    " show the cursor position all the time
+set autochdir                " 设定文件浏览器目录为当前目录
+set linebreak                " 整词换行
 
 set list                     " 显示Tab符，使用一高亮竖线代替
 " 用来打开list功能，显示不可见字符
