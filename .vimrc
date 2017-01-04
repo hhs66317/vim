@@ -30,11 +30,26 @@ Plug 'https://github.com/tmhedberg/matchit.git'
 
 call plug#end()
 
+" 判断目录是否存在，不存在则创建
+function! EnsureDirExists (dir)
+  if !isdirectory(a:dir)
+    if exists("*mkdir")
+      call mkdir(a:dir,'p')
+      echo "Created directory: " . a:dir
+    else
+      echo "Please create directory: " . a:dir
+    endif
+  endif
+endfunction
+
+
 " 设置swp文件的目录
+call EnsureDirExists($HOME . '/.vim/tmp')
 set dir=$HOME/.vim/tmp
 
 " 重启后撤销历史可用 persistent undo 
 set undofile
+call EnsureDirExists($HOME . '/.vim/undodir')
 set undodir=$HOME/.vim/undodir
 set undolevels=1000 "maximum number of changes that can be undone
 
