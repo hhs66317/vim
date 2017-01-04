@@ -6,7 +6,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
 Plug 'https://github.com/junegunn/vim-easy-align.git'
 Plug 'https://github.com/Valloric/MatchTagAlways.git',{'for':['html','xhtml','xml']}
-Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
 Plug 'https://github.com/vim-airline/vim-airline.git'
 Plug 'https://github.com/vim-airline/vim-airline-themes.git'
 Plug 'https://github.com/sjl/gundo.vim.git'
@@ -26,6 +25,8 @@ Plug 'https://github.com/vim-scripts/mru.vim.git'
 Plug 'https://github.com/vim-perl/vim-perl.git',{'for':['pl','pm']}
 Plug 'https://github.com/scrooloose/nerdcommenter.git',{'on':'NERDTreeToggle'}
 Plug 'https://github.com/jlanzarotta/colorSchemeExplorer.git',{'on':'ColorSchemeExplorer'}
+Plug 'https://github.com/asins/vimcdoc.git'
+Plug 'https://github.com/tmhedberg/matchit.git'
 
 call plug#end()
 
