@@ -29,6 +29,7 @@ Plug 'https://github.com/asins/vimcdoc.git'
 Plug 'https://github.com/tmhedberg/matchit.git'
 Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'https://github.com/vim-scripts/VisIncr.git'
+Plug 'https://github.com/vim-scripts/IndexedSearch.git'
 
 call plug#end()
 
