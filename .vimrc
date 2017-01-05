@@ -28,6 +28,7 @@ Plug 'https://github.com/jlanzarotta/colorSchemeExplorer.git',{'on':'ColorScheme
 Plug 'https://github.com/asins/vimcdoc.git'
 Plug 'https://github.com/tmhedberg/matchit.git'
 Plug 'https://github.com/tpope/vim-surround.git'
+Plug 'https://github.com/vim-scripts/VisIncr.git'
 
 call plug#end()
 
