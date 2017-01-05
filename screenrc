@@ -1,0 +1,53 @@
+# Set default encoding using utf8
+defutf8 on
+
+## 解决中文乱码,这个要按需配置
+defencoding utf8
+encoding utf8 utf8
+
+#兼容shell 使得.bashrc .profile /etc/profile等里面的别名等设置生效  
+shell -$SHELL
+
+
+#set the startup message
+startup_message off
+term linux
+#use ` as the Global Key
+# escape ``
+
+## 解决无法滚动  
+termcapinfo xterm|xterms|xs ti@:te=\E[2J
+
+# 屏幕缓冲区行数
+defscrollback 409600
+
+##设置状态栏
+hardstatus alwayslastline
+shelltitle "$|bash"
+#hardstatus string '%{= kG}[ %Y/%m/%d %{G}%c:%s %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][ %{C}(F7)Kill (F8)Screen (F9)Title (F10)Detach (F11)Prev (F12)Next %{kg}]'
+hardstatus string '%{= kG}[ %{G}%H-%S %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{C} %m-%d %{W}%c:%s %{g}]'
+
+# 关闭闪屏
+vbell off
+
+### w to show the window list
+bind w windowlist -b
+bind ^w windowlist -b
+###initial apps to run
+#screen -t compile 0
+#screen -t build   1
+#screen -t package 2
+#screen -t tmp     3
+#screen -t test    4
+#select 0
+
+#进行快捷键的绑定
+bindkey -k k7 kill
+bindkey -k k8 screen
+bindkey -k k9 title
+bindkey -k k; detach
+bindkey -k F1 prev
+bindkey -k F2 next
+bindkey -k k4 quit
+attrcolor u "-u B"
+autodetach on
