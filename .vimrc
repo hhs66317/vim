@@ -27,6 +27,7 @@ Plug 'https://github.com/scrooloose/nerdcommenter.git',{'on':'NERDTreeToggle'}
 Plug 'https://github.com/jlanzarotta/colorSchemeExplorer.git',{'on':'ColorSchemeExplorer'}
 Plug 'https://github.com/asins/vimcdoc.git'
 Plug 'https://github.com/tmhedberg/matchit.git'
+Plug 'https://github.com/tpope/vim-surround.git'
 
 call plug#end()
 
@@ -413,3 +414,60 @@ let g:NERDCommentEmptyLines = 1
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" surround.vim
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 1.删除包围符号的命令是ds,后面加的字符表示要删除的符号。比如：
+" "Hello *world!"           ds"         Hello world!
+" 2.替换包围符号的命令是cs,命令后跟两个参数，分别是被替换的符号和需要使用的符号。比如
+" "Hello *world!"           cs"'        'Hello world!'
+" 3.添加包围符号的命令是ys(ys可以记为you surround)，命令后同样跟两个参数，第一个是一个vim“动作”（motion）或者是一个文本对象。
+" Hello w*orld!             ysiw)       Hello (world)!
+" 4.添加包围符号还有个非常好用的方式：在可视模式v下，按下S后即可添加想要添加的包围符号了。
+" 示例
+" ===========
+"   Old text                  Command     New text ~
+"   "Hello *world!"           ds"         Hello world!
+"   [123+4*56]/2              cs])        (123+456)/2
+"   "Look ma, I'm *HTML!"     cs"<q>      <q>Look ma, I'm HTML!</q>
+"   if *x>3 {                 ysW(        if ( x>3 ) {
+"   my $str = *whee!;         vlllls'     my $str = 'whee!';
+"   <div>Yo!*</div>           dst         Yo!
+"   <div>Yo!*</div>           cst<p>      <p>Yo!</p>
+"
+" 命令列表
+" ===========
+" Normal mode
+" -----------
+" ds  - delete a surrounding
+" cs  - change a surrounding
+" ys  - add a surrounding
+" yS  - add a surrounding and place the surrounded text on a new line + indent it
+" yss - add a surrounding to the whole line
+" ySs - add a surrounding to the whole line, place it on a new line + indent it
+" ySS - same as ySs
+"
+" Visual mode
+" -----------
+" s   - in visual mode, add a surrounding
+" S   - in visual mode, add a surrounding but place text on new line + indent it
+"
+" Insert mode
+" -----------
+" <CTRL-s> - in insert mode, add a surrounding
+" <CTRL-s><CTRL-s> - in insert mode, add a new line + surrounding + indent
+" <CTRL-g>s - same as <CTRL-s>
+" <CTRL-g>S - same as <CTRL-s><CTRL-s>
+"
+" text-object motion 常见operation
+" ===========
+" ci: 例如，ci(，或者ci)，将会修改()之间的文本；
+" di: 剪切配对符号之间文本；
+" yi: 复制；
+" ca: 同ci，但修改内容包括配对符号本身；
+" da: 同di，但剪切内容包括配对符号本身；
+" ya: 同yi，但复制内容包括配对符号本身。
+" PS. dib等同于di(。diB等同于di{。
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
