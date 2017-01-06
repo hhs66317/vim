@@ -51,3 +51,9 @@ bindkey -k F2 next
 bindkey -k k4 quit
 attrcolor u "-u B"
 autodetach on
+
+# 分割窗口大小调整
+bind = resize =
+bind + resize +1
+bind - resize -1
+bind _ resize max
