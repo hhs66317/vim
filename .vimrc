@@ -65,6 +65,11 @@ map <silent> <leader>ee :e ~\.vimrc<cr>
 "When .vimrc is edited, reload it
 autocmd! bufwritepost .vimrc source ~\.vimrc
 
+" 文件编码设置
+set fenc=utf-8
+set encoding=utf-8
+set termencoding=utf-8
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 
 set laststatus=2             " 开启状态栏信息
 "if has("statusline")
