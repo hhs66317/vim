@@ -10,7 +10,7 @@ Plug 'https://github.com/vim-airline/vim-airline.git'
 Plug 'https://github.com/vim-airline/vim-airline-themes.git'
 Plug 'https://github.com/sjl/gundo.vim.git'
 Plug 'https://github.com/terryma/vim-multiple-cursors.git'
-Plug 'https://github.com/powerline/powerline.git'
+"Plug 'https://github.com/powerline/powerline.git'
 Plug 'https://github.com/majutsushi/tagbar.git'
 Plug 'https://github.com/Shougo/unite.vim.git'
 Plug 'https://github.com/mhinz/vim-signify.git'
@@ -122,8 +122,8 @@ function! AirlineInit()
 endfunction
 autocmd VimEnter * call AirlineInit()
 
-let g:airline_section_y =  '%{(exists("+bomb") && &bomb)?"[B]":""}' . airline#section#create_left(['ffenc'])
-let g:airline_section_z = 'Line:%l/%L[%p%%] Col:%v [%03.3b][0x%02.2B]'
+"let g:airline_section_y =  '%{(exists("+bomb") && &bomb)?"[B]":""}' . airline#section#create_left(['ffenc'])
+"let g:airline_section_z = 'Line:%l/%L[%p%%] Col:%v [%03.3b][0x%02.2B]'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
