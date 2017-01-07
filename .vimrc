@@ -30,6 +30,7 @@ Plug 'https://github.com/tmhedberg/matchit.git'
 Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'https://github.com/vim-scripts/VisIncr.git'
 Plug 'https://github.com/vim-scripts/IndexedSearch.git'
+Plug 'https://github.com/tomasr/molokai.git'
 
 call plug#end()
 
@@ -80,7 +81,7 @@ set laststatus=2             " 开启状态栏信息
 
 set wildmenu                 " 命令模式下使用Tab自动补全时，以菜单形式展示
 set ignorecase               " 取消大小写敏感
-colorscheme delek            " 主题
+colorscheme molokai          " 主题
 set nu!                      " 显示行号
 set hlsearch                 " 开启高亮显示结果
 set incsearch                " 开启实时搜索功能
