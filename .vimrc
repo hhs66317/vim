@@ -359,6 +359,7 @@ vnoremap <leader>rv c<C-O>:set revins<CR><C-R>"<Esc>:set norevins<CR>
 let NERDTreeIgnore=[]
 let NERDTreeShowHidden=1
 nmap <F3> :NERDTreeToggle <CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " terryma/vim-expand-region
