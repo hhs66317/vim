@@ -19,11 +19,11 @@ Plug 'https://github.com/Shougo/neocomplcache.vim.git'
 Plug 'https://github.com/kien/rainbow_parentheses.vim.git'
 Plug 'https://github.com/kshenoy/vim-signature.git'
 Plug 'https://github.com/dimasg/vim-mark.git'
-Plug 'https://github.com/scrooloose/nerdtree.git'
+Plug 'https://github.com/scrooloose/nerdtree.git',{'on':'NERDTreeToggle'}
 Plug 'https://github.com/terryma/vim-expand-region.git'
 Plug 'https://github.com/vim-scripts/mru.vim.git'
 Plug 'https://github.com/vim-perl/vim-perl.git',{'for':['pl','pm']}
-Plug 'https://github.com/scrooloose/nerdcommenter.git',{'on':'NERDTreeToggle'}
+Plug 'https://github.com/scrooloose/nerdcommenter.git'
 Plug 'https://github.com/jlanzarotta/colorSchemeExplorer.git',{'on':'ColorSchemeExplorer'}
 Plug 'https://github.com/asins/vimcdoc.git'
 Plug 'https://github.com/tmhedberg/matchit.git'
@@ -31,6 +31,7 @@ Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'https://github.com/vim-scripts/VisIncr.git'
 Plug 'https://github.com/vim-scripts/IndexedSearch.git'
 Plug 'https://github.com/tomasr/molokai.git'
+Plug 'https://github.com/altercation/vim-colors-solarized.git'
 
 call plug#end()
 
