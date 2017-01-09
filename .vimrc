@@ -6,6 +6,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
 Plug 'https://github.com/junegunn/vim-easy-align.git'
 Plug 'https://github.com/Valloric/MatchTagAlways.git',{'for':['html','xhtml','xml']}
+Plug 'https://github.com/tpope/vim-fugitive.git'
 Plug 'https://github.com/vim-airline/vim-airline.git'
 Plug 'https://github.com/vim-airline/vim-airline-themes.git'
 Plug 'https://github.com/sjl/gundo.vim.git'
