@@ -21,6 +21,7 @@ Plug 'https://github.com/kien/rainbow_parentheses.vim.git'
 Plug 'https://github.com/kshenoy/vim-signature.git'
 Plug 'https://github.com/dimasg/vim-mark.git'
 Plug 'https://github.com/scrooloose/nerdtree.git',{'on':'NERDTreeToggle'}
+Plug 'https://github.com/Xuyuanp/nerdtree-git-plugin.git',{'on':'NERDTreeToggle'}
 Plug 'https://github.com/terryma/vim-expand-region.git'
 Plug 'https://github.com/vim-scripts/mru.vim.git'
 Plug 'https://github.com/vim-perl/vim-perl.git',{'for':['pl','pm']}
