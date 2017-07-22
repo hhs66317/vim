@@ -34,6 +34,7 @@ Plug 'https://github.com/vim-scripts/VisIncr.git'
 Plug 'https://github.com/vim-scripts/IndexedSearch.git'
 Plug 'https://github.com/tomasr/molokai.git'
 Plug 'https://github.com/altercation/vim-colors-solarized.git'
+Plug 'https://github.com/vim-scripts/perl-support.vim'
 
 call plug#end()
 
