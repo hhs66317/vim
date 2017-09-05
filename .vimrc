@@ -70,6 +70,10 @@ map <silent> <leader>ee :e ~\.vimrc<cr>
 "When .vimrc is edited, reload it
 autocmd! bufwritepost .vimrc source ~\.vimrc
 
+" 使j和k命令自动判断是在折行内或是在折行间进行移动
+nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
+nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
+
 " 文件编码设置
 set fenc=utf-8
 set encoding=utf-8
