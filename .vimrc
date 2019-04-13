@@ -9,7 +9,8 @@ Plug 'https://github.com/Valloric/MatchTagAlways.git',{'for':['html','xhtml','xm
 Plug 'https://github.com/tpope/vim-fugitive.git'
 Plug 'https://github.com/vim-airline/vim-airline.git'
 Plug 'https://github.com/vim-airline/vim-airline-themes.git'
-Plug 'https://github.com/sjl/gundo.vim.git'
+" Plug 'https://github.com/sjl/gundo.vim.git'
+Plug 'https://github.com/mbbill/undotree.git'
 Plug 'https://github.com/terryma/vim-multiple-cursors.git'
 "Plug 'https://github.com/powerline/powerline.git'
 Plug 'https://github.com/majutsushi/tagbar.git'
@@ -138,11 +139,16 @@ autocmd VimEnter * call AirlineInit()
 
 " gundo.vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <silent> <f10> <esc>:GundoToggle<return>)
+" nmap <silent> <f10> <esc>:GundoToggle<return>)
 " Requirements:
 "     Vim 7.3+
 "     Python support for Vim
 "     Python 2.4+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" undotree.vim
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <silent> <f10> <esc>:UndotreeToggle<return>)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 

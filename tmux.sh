@@ -54,6 +54,16 @@ tmux send-keys -t $session:upload.2  'fish' C-m
 tmux send-keys -t $session:upload.2  'cd /home/upload;morbo -m production -l http://[::]:4001 ./android_upload.pl' C-m
 tmux send-keys -t $session:upload.3  'fish' C-m
 
+tmux new-window -t $session:6 -n mock
+tmux select-window -t $session:mock
+tmux source-file ~/.tmux/mylayout
+tmux send-keys -t $session:mock.1  'fish' C-m
+tmux send-keys -t $session:mock.1  'cd /home;plackup --port 12345 -r --access-log mock.log mock.psgi' C-m
+tmux send-keys -t $session:mock.2  'fish' C-m
+tmux send-keys -t $session:mock.2  'cd /home' C-m
+tmux send-keys -t $session:mock.3  'fish' C-m
+tmux send-keys -t $session:mock.3  'cd /home;tail -f mock.log' C-m
+
 tmux select-window -t $session:ros
-tmux attach-session -t $session
+# tmux attach-session -t $session
 
