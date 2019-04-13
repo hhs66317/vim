@@ -41,7 +41,7 @@ tmux new-window -t $session:4 -n excel
 tmux select-window -t $session:excel
 tmux source-file ~/.tmux/mylayout
 tmux send-keys -t $session:excel.1  'fish' C-m
-tmux send-keys -t $session:excel.1  'cd /usr/local/node-v8.5.0-linux-x64/lib/node_modules/ethercalc/bin;ethercalc' C-m
+tmux send-keys -t $session:excel.1  'cd /usr/local/node-v8.5.0-linux-x64/lib/node_modules/ethercalc/bin;./ethercalc' C-m
 tmux send-keys -t $session:excel.2  'fish' C-m
 tmux send-keys -t $session:excel.3  'fish' C-m
 
@@ -60,9 +60,19 @@ tmux source-file ~/.tmux/mylayout
 tmux send-keys -t $session:mock.1  'fish' C-m
 tmux send-keys -t $session:mock.1  'cd /home;plackup --port 12345 -r --access-log mock.log mock.psgi' C-m
 tmux send-keys -t $session:mock.2  'fish' C-m
-tmux send-keys -t $session:mock.2  'cd /home' C-m
+tmux send-keys -t $session:mock.2  'cd /home;plackup --port 22222 -r --access-log test.log test.psgi' C-m
 tmux send-keys -t $session:mock.3  'fish' C-m
 tmux send-keys -t $session:mock.3  'cd /home;tail -f mock.log' C-m
+
+tmux new-window -t $session:7 -n flash
+tmux select-window -t $session:flash
+tmux source-file ~/.tmux/mylayout
+tmux send-keys -t $session:flash.1  'fish' C-m
+tmux send-keys -t $session:flash.1  'cd ~;perl FlashVerChecker.pl' C-m
+tmux send-keys -t $session:flash.2  'fish' C-m
+tmux send-keys -t $session:flash.2  'cd ~' C-m
+tmux send-keys -t $session:flash.3  'fish' C-m
+tmux send-keys -t $session:flash.3  'cd ~' C-m
 
 tmux select-window -t $session:ros
 # tmux attach-session -t $session
