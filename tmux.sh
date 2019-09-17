@@ -74,6 +74,16 @@ tmux send-keys -t $session:flash.2  'cd ~' C-m
 tmux send-keys -t $session:flash.3  'fish' C-m
 tmux send-keys -t $session:flash.3  'cd ~' C-m
 
+tmux new-window -t $session:8 -n minipage
+tmux select-window -t $session:minipage
+tmux source-file ~/.tmux/mylayout
+tmux send-keys -t $session:minipage.1  'fish' C-m
+tmux send-keys -t $session:minipage.1  'cd /home/test/20190619/' C-m
+tmux send-keys -t $session:minipage.2  'fish' C-m
+tmux send-keys -t $session:minipage.2  'd /home/test/20190619/' C-m
+tmux send-keys -t $session:minipage.3  'fish' C-m
+tmux send-keys -t $session:minipage.3  'd /home/test/20190619/' C-m
+
 tmux select-window -t $session:ros
 # tmux attach-session -t $session
 
