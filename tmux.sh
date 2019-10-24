@@ -16,9 +16,10 @@ tmux new -d -s $session
 tmux renamew -t $session:1 ros
 tmux select-window -t $session:ros
 tmux source-file ~/.tmux/mylayout
-tmux send-keys -t $session:ros.1 'fish' Enter
-tmux send-keys -t $session:ros.2 'fish' Enter
-tmux send-keys -t $session:ros.3 'fish' Enter
+tmux send-keys -t $session:ros.1 'fish' C-m
+tmux send-keys -t $session:ros.2 'fish' C-m
+tmux send-keys -t $session:ros.2 'cd /home;plackup --port 33333 -r --access-log task.log task.psgi' C-m
+tmux send-keys -t $session:ros.3 'fish' C-m
 
 tmux new-window -t $session:2 -n chat
 tmux select-window -t $session:chat
@@ -27,7 +28,7 @@ tmux send-keys -t $session:chat.1 'fish' C-m
 tmux send-keys -t $session:chat.1 'cd /home/hack.chat;node server.js' C-m
 tmux send-keys -t $session:chat.2 'fish' C-m
 tmux send-keys -t $session:chat.2 'cd /home/hack.chat/client;http-server -p 11111' C-m
-tmux send-keys -t $session:chat.3 'fish' Enter
+tmux send-keys -t $session:chat.3 'fish' C-m
 
 tmux new-window -t $session:3 -n mojo
 tmux select-window -t $session:mojo
@@ -83,6 +84,12 @@ tmux send-keys -t $session:minipage.2  'fish' C-m
 tmux send-keys -t $session:minipage.2  'd /home/test/20190619/' C-m
 tmux send-keys -t $session:minipage.3  'fish' C-m
 tmux send-keys -t $session:minipage.3  'd /home/test/20190619/' C-m
+
+tmux new-window -t $session:9 -n task
+tmux select-window -t $session:task
+tmux source-file ~/.tmux/tasklayout
+tmux send-keys -t $session:task.1  'fish' C-m
+tmux send-keys -t $session:task.1  'cd /home/test/20191023/' C-m
 
 tmux select-window -t $session:ros
 # tmux attach-session -t $session
