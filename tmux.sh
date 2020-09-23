@@ -34,7 +34,8 @@ tmux new-window -t $session:3 -n mojo
 tmux select-window -t $session:mojo
 tmux source-file ~/.tmux/mylayout
 tmux send-keys -t $session:mojo.1  'fish' C-m
-tmux send-keys -t $session:mojo.1  'cd /home/mojo_web;morbo Mojo_web.pl' C-m
+# tmux send-keys -t $session:mojo.1  'cd /home/mojo_web;morbo Mojo_web.pl' C-m
+tmux send-keys -t $session:mojo.1  'cd /home/;plackup --port 3000 -r --access-log dir.log dir.psgi' C-m
 tmux send-keys -t $session:mojo.2  'fish' C-m
 tmux send-keys -t $session:mojo.3  'fish' C-m
 
