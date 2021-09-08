@@ -3,6 +3,8 @@
 # 兼容zsh
 # export DISABLE_AUTO_TITLE="true"
 
+declare -x HOME="/root"
+
 session="work"
 
 tmux has-session -t $session
@@ -92,6 +94,11 @@ tmux source-file ~/.tmux/tasklayout
 tmux send-keys -t $session:task.1  'fish' C-m
 tmux send-keys -t $session:task.1  'cd /home/test/20191023/' C-m
 
+tmux new-window -t $session:10 -n service
+tmux select-window -t $session:service
+tmux source-file ~/.tmux/tasklayout
+tmux send-keys -t $session:service.1  'runuser - nginx -s /bin/sh -c "filebrowser -d /etc/filebrowser.db"' C-m
+tmux send-keys -t $session:service.2  'runuser - nginx -s /bin/sh -c "chfs --file=/etc/chfs.ini"' C-m
+
 tmux select-window -t $session:ros
 # tmux attach-session -t $session
-
